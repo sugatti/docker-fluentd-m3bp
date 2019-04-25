@@ -1,0 +1,16 @@
+version: '3'
+services:
+  fluentd:
+    build: ./fluentd
+    ports:
+      - "24224:24224"
+    volumes:
+      - ./fluentd/etc:/fluentd/etc
+      - ./directio:/directio
+    environment:
+      - FLUENTD_CONF=fluent.conf
+  m3bp:
+    build: .
+    volumes:
+      - ./workspace:/workspace
+      - ./directio:/directio
