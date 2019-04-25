@@ -4,14 +4,14 @@
 /.settings
 /.gradle
 /.idea
-/asakusa
 /target
 /build
 /bin
 /out
 /_directio_temp
-/result
-/lib
+/directio/result
+/workspace/asakusa
+/workspace/lib
 *.log
 *.iml
 *.ipr
